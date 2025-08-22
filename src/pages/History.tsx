@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { House, History, TimerIcon, Sun, Settings } from 'lucide-react';
+import { House, History as HistoryIcon, TimerIcon, Sun, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/containers.module.css'; // Importando o CSS Module para estilos específicos
 import { Button } from '../components/Button';
 
-export function Index() {
+export function History() {
   const [hover, setHover] = useState(false);
   // Defina a cor do ícone conforme o hover
   const headerIconColor = hover ? '#07694d' : '#0da170';
@@ -32,14 +32,16 @@ export function Index() {
       </Link>
 
       <div className={styles.containerMenu}>
-        <Button>
-          <House color={iconColorMenu} />
-        </Button>
-
-      <Link to="/history">
-        <Button>
-            <History color={iconColorMenu} />
+        <Link to="/">
+          <Button>
+            <House color={iconColorMenu} />
           </Button>
+        </Link>
+
+        <Link to="/history">
+        <Button>
+          <HistoryIcon color={iconColorMenu} />
+        </Button>
         </Link>
 
         <Button>
