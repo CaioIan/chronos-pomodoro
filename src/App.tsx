@@ -1,15 +1,14 @@
-import { TimerIcon } from 'lucide-react';
-import { Heading } from './components/Heading';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './styles/global.css';
 import './styles/theme.css';
+import { Index } from "./pages/index";
 
 export function App() {
   return (
-    <Heading>
-      Hello World
-      <button>
-        <TimerIcon />
-      </button>
-      </Heading>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Index />} index />
+        </Routes>
+      </BrowserRouter>
   );
 }
