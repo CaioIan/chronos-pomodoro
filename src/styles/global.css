@@ -14,3 +14,17 @@ body {
   background: var(--gray-900);
   color: var(--text-default);
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  text-align: center;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  font-size: 1.1rem
+}
