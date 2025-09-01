@@ -1,20 +1,41 @@
-import { HistoryIcon, House, Settings, Sun } from "lucide-react";
-import { Link } from "react-router-dom";
-import styles from './Menu.module.css'; // Importando o CSS Module para estilos específicos
-import { useState } from "react";
+import { HistoryIcon, House, MoonIcon, Settings, Sun } from "lucide-react";
+import { data, Link } from "react-router-dom";
+import styles from './Menu.module.css';
+import { useState, useEffect } from "react";
 
 type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
 
-  const [theme, setTheme] = useState<AvailableThemes>('dark');
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const storageTheme =
+    localStorage.getItem('theme') as AvailableThemes || 'dark';
+    return storageTheme;
+  });
+
+  const setThemeIcon = {
+    dark: <Sun />,
+    light: <MoonIcon />
+  }
 
   function handleThemeChange(
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) {
     event.preventDefault();
-    console.log('Clicado', Date.now());
+    setTheme(prevTheme => {
+      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+      return nextTheme;
+    });
   }
+
+    useEffect(() => {
+      console.log('Theme mudou para', theme, Date.now());
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      return () => {
+        console.log('Este componente será atualizado', Date.now());
+      }
+    },[theme]); //Executa apenas quando o valor de theme muda
 
   return (
     <div className={styles.menu}>
@@ -52,7 +73,7 @@ export function Menu() {
       title="Mudar tema"
       onClick={handleThemeChange}
       >
-        <Sun />
+        {setThemeIcon[theme]}
       </Link>
     </div>
   );
