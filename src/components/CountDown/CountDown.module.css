@@ -11,3 +11,9 @@
   text-align: center;
   gap: 1rem;
 }
+
+.countdownValue {
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: bold;
+  text-align: center;
+}
