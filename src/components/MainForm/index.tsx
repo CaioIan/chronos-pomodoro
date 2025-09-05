@@ -13,7 +13,7 @@ export function MainForm() {
             </div>
 
             <div className='formRow'>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <p>O próximo intervalo será de 1000 anos</p>
             </div>
 
             <div className='formRow'>

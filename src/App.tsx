@@ -4,17 +4,19 @@ import './styles/theme.css';
 import { Home } from "./pages/Home/Index";
 import { PomodoroDescript } from "./pages/Pomodoro-Descript";
 import { NotFound } from "./pages/NotFound";
+import { TaskContextProvider } from "./contexts/TaskContext/TaskContextProvider";
 
 export function App() {
+
   return (
+    <TaskContextProvider>
       <BrowserRouter>
         <Routes>
-          <Route element={<Home />} index />
-          <Route element={<PomodoroDescript />} path="/pomodoro-descript" />
-
-          {/* Rota para 404 */}
-        <Route path="*" element={<NotFound />} />
+            <Route element={<Home />} index />
+            <Route element={<PomodoroDescript />} path="/pomodoro-descript" />
+            <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+    </TaskContextProvider>
   );
 };
