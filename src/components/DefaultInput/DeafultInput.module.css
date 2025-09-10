@@ -13,7 +13,8 @@
 .input:focus {
   outline: none;
   border: 0.2rem solid var(--primary);
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
 }
 
 .input::placeholder {
