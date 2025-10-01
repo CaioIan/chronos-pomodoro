@@ -23,12 +23,7 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
       });
       worker.terminate();
     } else {
-      // Log da task atual e tempo restante
-      console.log('Temporizador:', {
-        tempo: countDownSeconds,
-        taskAtual: state.activeTask,
-      });
-      
+
       dispatch({
         type: TaskActionTypes.COUNT_DOWN,
         payload: { secondsRemaining: countDownSeconds },
@@ -39,10 +34,14 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
 
   useEffect(() => {
 
+    localStorage.setItem('state', JSON.stringify(state))
+
     if (!state.activeTask) {
-      console.log('Worker terminado por falta de activeTask');
+      // console.log('Worker terminado por falta de activeTask');
       worker.terminate();
     }
+
+    document.title = `${state.formattedSecondsRemaining} - Chronos Pomodoro`
 
     worker.postMessage(state);
   }, [worker, state]);

@@ -30,3 +30,8 @@
   align-items: center;
   justify-content: center;
 }
+.input:disabled {
+  border-bottom: 0.2rem solid var(--disabled);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}

@@ -1,6 +1,7 @@
 import { Container } from "../../components/Container";
 import { GenericHtml } from "../../components/GenericHtml";
 import { Heading } from "../../components/Heading";
+import { RouterLink } from "../../components/RouterLink";
 import { MainTemplate } from "../../templates/MainTemplate";
 
 export function AboutPomodoro() {
@@ -11,49 +12,113 @@ export function AboutPomodoro() {
         <Heading>A técnica Pomodoro 🍅 </Heading>
 
       <p>
-        Você já sentiu que começou a estudar ou trabalhar e, quando percebeu, já estava
-        cansado, distraído ou enrolando no celular? Pois é, isso acontece com todo mundo.
-        É aí que entra a técnica Pomodoro: um jeito simples e poderoso de organizar seu
-        tempo e aumentar o foco.
-      </p>
+            A Técnica Pomodoro é uma metodologia de produtividade criada por{' '}
+            <strong>Francesco Cirillo</strong>, que consiste em dividir o
+            trabalho em blocos de tempo (os famosos "Pomodoros") intercalados
+            com pausas. O objetivo é manter o foco total por um período curto e
+            garantir descansos para evitar o cansaço mental.
+          </p>
 
-      <p>
-        A ideia é dividir seu tempo em blocos curtos de concentração (os “pomodoros”) e
-        intervalos estratégicos de descanso. Assim, você mantém a mente fresca, evita a
-        sobrecarga e consegue produzir muito mais.
-      </p>
+          <img src='https://placehold.co/1920x1080' alt='' />
 
-      <h2>Como funciona na prática:</h2>
-      <ul>
-        <li>Escolha uma tarefa – algo que você realmente precisa fazer, como estudar uma matéria, escrever um relatório ou arrumar sua mesa.</li>
-        <li>Programe o timer para 25 minutos – esse será o seu primeiro pomodoro.</li>
-        <li>Trabalhe com foco total – sem celular, sem distrações. Esses 25 minutos são só para aquela tarefa.</li>
-        <li>Faça uma pausa curta de 5 minutos – levante, estique o corpo, beba água, respire.</li>
-        <li>Repita o ciclo 4 vezes – depois disso, faça uma pausa maior de 15 a 30 minutos para descansar de verdade.</li>
-      </ul>
+          <h2>Como funciona o Pomodoro tradicional?</h2>
+          <ul>
+            <li>
+              <strong>1. Defina uma tarefa</strong> que você deseja realizar.
+            </li>
+            <li>
+              <strong>2. Trabalhe nela por 25 minutos</strong> sem interrupções.
+            </li>
+            <li>
+              <strong>3. Faça uma pausa curta de 5 minutos</strong>.
+            </li>
+            <li>
+              <strong>4. A cada 4 ciclos, faça uma pausa longa</strong>{' '}
+              (geralmente 15 a 30 minutos).
+            </li>
+          </ul>
 
-      <p>Simples, né? Mas funciona muito bem, porque você treina seu cérebro a manter o foco em pequenas doses.</p>
+          <h2>
+            Mas no <strong>Chronos Pomodoro</strong> tem um diferencial 🚀
+          </h2>
 
-      <h2>Exemplos de como usar no dia a dia:</h2>
-      <ul>
-        <li>📚 Estudos: se você precisa ler 40 páginas de um livro, pode dividir em 2 pomodoros de 25 minutos cada.</li>
-        <li>🖊️ Escrever trabalhos: ao invés de tentar escrever um texto inteiro de uma vez, você pode focar em um parágrafo ou uma seção por pomodoro.</li>
-        <li>🏠 Organização da casa: arrumar o quarto em 25 minutos, pausa, depois mais 25 minutos para lavar a louça.</li>
-        <li>💻 Trabalho no computador: responder e-mails em um pomodoro, depois focar em um relatório no próximo.</li>
-      </ul>
+          <p>
+            Nosso app segue o conceito original, mas com algumas melhorias e
+            personalizações pra deixar o processo ainda mais eficiente:
+          </p>
 
-      <h2>Por que funciona tão bem?</h2>
-      <ul>
-        <li>Ajuda a vencer a procrastinação, porque 25 minutos parecem bem menos assustadores do que “horas” de trabalho.</li>
-        <li>Melhora o foco e a disciplina, já que você treina o cérebro a se concentrar em blocos curtos.</li>
-        <li>Traz equilíbrio entre produtividade e descanso, evitando a fadiga mental.</li>
-      </ul>
+          <h3>⚙️ Personalização do tempo</h3>
+          <p>
+            Você pode configurar o tempo de foco, descanso curto e descanso
+            longo do jeito que quiser! Basta acessar a{' '}
+            <RouterLink to='/settings/'>página de configurações</RouterLink> e
+            ajustar os minutos como preferir.
+          </p>
 
-      <p>
-        👉 Em resumo: o Pomodoro é como se fosse um jogo contra o relógio. Você foca intensamente
-        por 25 minutos, ganha pontos (ou melhor, resultados 😅) e descansa. Com o tempo, você
-        vai perceber que rende muito mais e se sente bem menos cansado no fim do dia.
-      </p>
+          <h3>🔁 Ciclos organizados em sequência</h3>
+          <p>
+            A cada ciclo completado, uma nova task é adicionada automaticamente
+            ao seu histórico, e o app já sugere o próximo ciclo (foco ou
+            descanso).
+          </p>
+          <p>
+            <strong>Nosso padrão:</strong>
+          </p>
+          <ul>
+            <li>
+              Ciclos <strong>ímpares</strong>: Trabalho (foco).
+            </li>
+            <li>
+              Ciclos <strong>pares</strong>: Descanso curto.
+            </li>
+            <li>
+              Ciclo <strong>8</strong>: Descanso longo especial, pra resetar o
+              ciclo completo.
+            </li>
+          </ul>
+
+          <h3>🍅 Visualização dos ciclos</h3>
+          <p>
+            Logo abaixo do cronômetro, você verá bolinhas coloridas
+            representando os ciclos:
+          </p>
+          <ul>
+            <li>🟡 Amarelo: Ciclo de trabalho (foco).</li>
+            <li>🟢 Verde: Descanso curto.</li>
+            <li>🔵 Azul: Descanso longo (aparece a cada 8 ciclos).</li>
+          </ul>
+
+          <p>
+            Assim, você sempre sabe em que parte do processo está e o que vem a
+            seguir. Não precisa mais anotar no papel ou ficar calculando de
+            cabeça!
+          </p>
+
+          <h3>📊 Histórico automático</h3>
+          <p>
+            Todas as suas tarefas e ciclos concluídos ficam salvos no{' '}
+            <RouterLink to='/history/'>histórico</RouterLink>, com status de
+            completas ou interrompidas. Assim, você consegue acompanhar sua
+            evolução ao longo do tempo.
+          </p>
+
+          <h2>Por que usar o Chronos Pomodoro?</h2>
+          <ul>
+            <li>✅ Organize seu foco com clareza.</li>
+            <li>✅ Trabalhe e descanse na medida certa.</li>
+            <li>✅ Personalize seus próprios ciclos e tempos.</li>
+            <li>✅ Acompanhe seu histórico automaticamente.</li>
+          </ul>
+
+          <p>
+            <strong>Pronto pra focar?</strong> Bora lá{' '}
+            <RouterLink to='/'>voltar para a página inicial</RouterLink> e
+            iniciar seus Pomodoros! 🍅🚀
+          </p>
+
+          <p>
+            <em>"Foco total, sem pressa, sem pausa, só vai!"</em> 💪🧘‍♂️
+          </p>
       </GenericHtml>
       </Container>
     </MainTemplate>
