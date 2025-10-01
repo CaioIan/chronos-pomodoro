@@ -23,10 +23,17 @@ export function TaskContextProvider({ children }: TaskContextProviderProps) {
       });
       worker.terminate();
     } else {
+      // Log da task atual e tempo restante
+      console.log('Temporizador:', {
+        tempo: countDownSeconds,
+        taskAtual: state.activeTask,
+      });
+      
       dispatch({
         type: TaskActionTypes.COUNT_DOWN,
         payload: { secondsRemaining: countDownSeconds },
       });
+
     }
   });
 

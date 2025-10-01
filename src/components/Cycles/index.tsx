@@ -13,8 +13,6 @@ export function Cycles() {
     longBreakTime: 'descanso longo'
   }
 
-  console.log(cycleSteps)
-
   return (
     <div className={styles.cycles}>
       <span>Ciclos:</span>
@@ -22,9 +20,8 @@ export function Cycles() {
         {cycleSteps.map((_, index) => {
           const nextCycle = getNextCycle(index)
           const nextCycleType = getNextCycleType(nextCycle)
-          
           return <span
-          key={nextCycleType}
+          key={`${nextCycleType}-${index}`}
           className={`${styles.cycleDot} ${styles[nextCycleType]}`}
           aria-label={`Indicador de Ciclo de ${cycleDescriptionMap[nextCycleType]}`}
           title={`Indicador de Ciclo de ${cycleDescriptionMap[nextCycleType]}`}
