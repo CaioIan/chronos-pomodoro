@@ -1,0 +1,32 @@
+.history-Header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.history-Header h1 {
+  margin: 0;
+}
+
+.history-Header-Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  background-color: var(--error);
+  transition: background 0.2s ease;
+  cursor: pointer;
+  border: none;
+
+
+  &:hover {
+    background: var(--errorHover);
+    filter: brightness(0.8);
+  }
+
+}
+

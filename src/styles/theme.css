@@ -45,6 +45,7 @@
   --success: #22c55e; /* Indica sucesso (verde) */
   --warning: #eab308; /* Indica alerta (amarelo) */
   --error: #991b1b; /* Indica erro (vermelho) */
+  --errorHover: #831313;
   --info: #0ea5e9; /* Indica informação (azul) */
 
   /* 🎨 Texto sobre fundos coloridos (para garantir contraste) */
