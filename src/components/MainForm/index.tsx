@@ -62,7 +62,7 @@ export function MainForm() {
           labelText='task'
           id='meuInput'
           type='text'
-          placeholder='Digite algo'
+          placeholder='Ex: estudar'
           ref={taskNameInput}
           disabled={!!state.activeTask}
           defaultValue={lastTaskName}

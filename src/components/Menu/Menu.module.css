@@ -2,14 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.6rem;
+  gap: 1rem;
 }
 
 .menuLink {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 14px;
+  padding: 10px 10px;
   border-radius: 8px;
   text-decoration: none;
   color: black;
@@ -23,6 +23,6 @@
 }
 
 .menuLink svg {
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 26px;
+  height: 26px;
 }

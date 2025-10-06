@@ -7,13 +7,14 @@
 
 .history-Header h1 {
   margin: 0;
+  font-size: 24pt
 }
 
 .history-Header-Button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 14px;
+  padding: 10px 10px;
   border-radius: 8px;
   text-decoration: none;
   color: black;
@@ -30,3 +31,33 @@
 
 }
 
+.responsiveTable {
+  overflow-x: auto;
+  border-radius: 0.8rem;
+  width: 94%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.responsiveTable table {
+  width: 100%;
+  min-width: 54rem;
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+.responsiveTable th {
+  background-color: var(--gray-600);
+}
+
+.responsiveTable td {
+  background-color: var(--gray-800);
+}
+
+.responsiveTable th,
+.responsiveTable td {
+  border-bottom: 0.2rem solid var(--gray-700);
+  text-align: left;
+  padding: 1.2rem;
+  white-space: nowrap;
+}

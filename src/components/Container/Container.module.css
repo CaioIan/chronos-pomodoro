@@ -3,10 +3,13 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
 
 .content {
   margin: 1.2rem;
+  max-width: 100%;
+  overflow-x: visible;
 }
