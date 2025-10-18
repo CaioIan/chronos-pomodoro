@@ -1,0 +1,19 @@
+.settingsFormContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    flex-direction: column;
+}
+
+.settingsFormContainer h1 {
+    margin: 0;
+    font-size: 24pt;
+}
+
+.settingsFormContainer p {
+    margin: 0;
+    padding: 0px 10px 0px;
+    text-align: center;
+    font-size: 12pt;
+}
