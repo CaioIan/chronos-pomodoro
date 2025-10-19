@@ -1,4 +1,5 @@
 import type { TaskModel } from "../../models/TaskModel";
+import type { TaskStateModel } from "../../models/TaskStateModel";
 
 //@ts-ignore
 export enum TaskActionTypes {
@@ -21,11 +22,8 @@ export type TaskActionsWithPayload =
     }
   | {
       type: TaskActionTypes.CHANGE_SETTINGS;
-      payload: {
-        workTime: number,
-        shortBreakTime: number,
-        longBreakTime: number,
-      }
+      payload: TaskStateModel['config'];
+      
     }
 
 export type TaskActionsWithoutPayload =
