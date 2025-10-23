@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <rect x="80" y="80" width="1040" height="640" rx="8" fill="#f8fafc" stroke="#e6eef8" stroke-width="2" />
+  <g fill="#94a3b8">
+    <circle cx="220" cy="260" r="60" />
+    <circle cx="480" cy="260" r="60" />
+    <circle cx="740" cy="260" r="60" />
+  </g>
+  <text x="50%" y="68%" font-family="Inter, Arial, sans-serif" font-size="30" fill="#64748b" text-anchor="middle">Placeholder de imagem</text>
+  <text x="50%" y="76%" font-family="Inter, Arial, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">Substitua por uma captura real e mantenha o mesmo nome de arquivo</text>
+</svg>
