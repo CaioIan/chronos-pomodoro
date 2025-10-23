@@ -78,14 +78,6 @@ Você pode ajustar os minutos de foco, pausa curta e pausa longa.
 
 ---
 
-## Galeria de placeholders
-
-Um placeholder genérico está disponível para você substituir por qualquer captura futura:
-
-![Placeholder](public/images/screenshots/06-placeholder.svg)
-
----
-
 ## Por que usar o Tempus Pomodoro?
 
 - ✅ Organize seu foco com clareza.
