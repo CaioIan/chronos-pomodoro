@@ -7,7 +7,7 @@ export function Header() {
     <div className={styles.logo}>
       <RouterLink to="/" className={styles.logoLink}>
         <TimerIcon />
-        <span>Chronos</span>
+        <span>Tempus</span>
       </RouterLink>
     </div>
   );
