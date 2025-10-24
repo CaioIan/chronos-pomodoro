@@ -60,7 +60,7 @@ Quando um ciclo termina, uma nova task é registrada no histórico com seu estad
 
 ## Configurações (personalize seus tempos)
 
-Você pode ajustar os minutos de foco, pausa curta e pausa longa.
+Você pode ajustar os minutos de foco, descanso curto e descanso longo.
 
 
 ![Configurações](public/images/screenshots/02-settings.png)
