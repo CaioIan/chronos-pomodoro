@@ -5,7 +5,7 @@ import { useEffect} from 'react';
 export function Settings() {
 
     useEffect(() => {
-    document.title = 'Configurações - Chronos Pomodoro';
+    document.title = 'Configurações - Tempus Pomodoro';
   }, []);
 
     return (

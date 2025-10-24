@@ -57,7 +57,7 @@ export function History() {
   }, [state.tasks]);
 
     useEffect(() => {
-    document.title = 'Histórico - Chronos Pomodoro';
+    document.title = 'Histórico - Tempus Pomodoro';
   }, []);
 
   useEffect(() => {

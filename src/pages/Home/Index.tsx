@@ -6,7 +6,7 @@ import { MainForm } from '../../components/MainForm';
 
 export function Home() {
   useEffect(() => {
-    document.title = 'Chronos Pomodoro';
+    document.title = 'Tempus Pomodoro';
   }, []);
   return (
       <MainTemplate>
