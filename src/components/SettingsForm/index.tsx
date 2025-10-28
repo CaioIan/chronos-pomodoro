@@ -58,7 +58,6 @@ export function SettingsForm() {
     showMessage.success('Configurações salvas!');
 }
 
-    console.log('SALVAR');
 
     
     return (
@@ -94,8 +93,8 @@ export function SettingsForm() {
             />
             <DefaultButton
                 style={{ 
-                    padding: '0.5rem 1rem',  // vertical horizontal
-                    minWidth: '120px'        // largura mínima
+                    padding: '0.5rem 1rem',
+                    minWidth: '120px'       
                 }}
                 icon={<SaveIcon />}
                 aria-label='Salvar configurações'

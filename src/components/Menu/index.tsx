@@ -28,12 +28,8 @@ export function Menu() {
   }
 
     useEffect(() => {
-      console.log('Theme mudou para', theme, Date.now());
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
-      return () => {
-        console.log('Este componente será atualizado', Date.now());
-      }
     },[theme]); //Executa apenas quando o valor de theme muda
 
   return (
